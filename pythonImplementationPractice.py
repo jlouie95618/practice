@@ -30,12 +30,31 @@ def main(args):
 	if linked_list.search("Minas Tirith") != None:
 		print "Found!"
 	linked_list.search("foobar")
+	# Error Testing
+	print ""
 	new_linked_list = linkedlist()
 	new_linked_list.search("Minas Tirith")
 	new_linked_list.search("foobar")
 
 	# Testing remove functionality
 	linked_list.remove("Gondor")
+	linked_list.printList()
+	# Error testing
+	print ""
+	linked_list.remove("foobar")
+	new_linked_list.remove("Minas Tirith")
+	new_linked_list.remove("foobar")
+	print linked_list.size
+	print new_linked_list.size
+
+
+	print ""
+	linked_list.remove("Minas Tirith")
+	linked_list.printList()
+	print linked_list.size
+
+	print ""
+	linked_list.remove("Rohan")
 	linked_list.printList()
 
 

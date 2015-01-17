@@ -13,6 +13,8 @@ class linkedlist():
 	def __init__(self, first_node = None):
 		# the head is a node object passed in from program
 		self.head = first_node
+		if first_node != None: self.size = 1
+		else: self.size = 0
 
 	def insert(self, new_node):
 		if self.head == None:
@@ -24,6 +26,7 @@ class linkedlist():
 			new_node.next_node = self.head
 			# replace reference to head with new_node
 			self.head = new_node
+		self.size += 1
 
 	def search(self, data, flag = False):
 		# Check to make sure the linked list is not empty
@@ -47,27 +50,29 @@ class linkedlist():
 			return None
 
 	def remove(self, data = None):
-		# Remove technique is to basically take the NEXT
-		#	node, copy it to current node and then remove
-		#	the next node as if it were the "current" node
-		#	Edge case: last node in list
-		curr_node = self.search(data, True)
-		if curr_node == None:
+		# Use flag to indicate desired node is the node
+		#	BEFORE the node with given data
+		if self.size == 1: 
+			self.head = None
+			return
+
+		prev_node = self.search(data, True)
+		if prev_node == None:
 			print "No element removed."
 		else:
-			if curr_node.next_node != None and curr_node != None:
-				print "here!"
-				curr_node = curr_node.next_node
-				curr_node.next_node = (curr_node.next_node).next_node
-				del curr_node.next_node
-			else: 
-				curr_node = None
+			curr_node = prev_node.next_node
+			prev_node.next_node = curr_node.next_node
+			self.size -= 1
+			del curr_node
+
 
 	def printList(self):
-		curr = self.head
-		str_rep = ""
-		while curr != None:
-			str_rep += (str(curr) + " -> ")
-			curr = curr.next_node
-		str_rep += "None"
-		print str_rep
+		if self.head != None:
+			curr = self.head
+			str_rep = ""
+			while curr != None:
+				str_rep += (str(curr) + " -> ")
+				curr = curr.next_node
+			str_rep += "None"
+			print str_rep
+		else: print "Empty list."
