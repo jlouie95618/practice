@@ -25,6 +25,8 @@ def main(args):
 
 	linked_list.printList()
 
+
+	# Testing search functionality
 	if linked_list.search("Minas Tirith") != None:
 		print "Found!"
 	linked_list.search("foobar")
@@ -32,25 +34,9 @@ def main(args):
 	new_linked_list.search("Minas Tirith")
 	new_linked_list.search("foobar")
 
-	# print (linked_list.search("Gondor")).data
-
-	# # Now for the real test...
-	# new_linked_list = linkedlist()
-	# for x in xrange(0, len(args)):
-	# 	print x
-	# 	new_node = node(args[x])
-	# 	new_linked_list.insert(new_node)
-
-	# print "sanity"
-	# print (new_linked_list.search(args[3])).data
-	# print "sanity"
-	# print (new_linked_list.search(args[0])).data
-	# print "sanity"
-	# print (new_linked_list.search(args[5])).data
-	# new_linked_list.remove(args[0])
-	# print (new_linked_list.search(args[0])).data
-
-
+	# Testing remove functionality
+	linked_list.remove("Gondor")
+	linked_list.printList()
 
 
 main(sys.argv)

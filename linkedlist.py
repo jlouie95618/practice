@@ -34,15 +34,34 @@ class linkedlist():
 		else:
 			# obtain head node in order to traverse list
 			curr = self.head
+			if flag == True: prev = None
 			while curr != None:
-				# if 
+				# checking for matching data, in which case the while loop
+				#	will be broken with a return statement
+				if curr.data == data and flag == True: return prev
 				if curr.data == data: return curr
+				if flag == True: prev = curr
 				curr = curr.next_node
+			# case when the data could not be found
 			print "A node with the given data could not be found."
 			return None
 
 	def remove(self, data = None):
-		pass
+		# Remove technique is to basically take the NEXT
+		#	node, copy it to current node and then remove
+		#	the next node as if it were the "current" node
+		#	Edge case: last node in list
+		curr_node = self.search(data, True)
+		if curr_node == None:
+			print "No element removed."
+		else:
+			if curr_node.next_node != None and curr_node != None:
+				print "here!"
+				curr_node = curr_node.next_node
+				curr_node.next_node = (curr_node.next_node).next_node
+				del curr_node.next_node
+			else: 
+				curr_node = None
 
 	def printList(self):
 		curr = self.head
