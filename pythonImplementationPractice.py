@@ -2,6 +2,11 @@ import os, os.path, sys, math, time
 from linkedlist import linkedlist
 from node import node
 
+""" Lord of the Rings inspiration from my Stanford 106B
+	course reader.
+
+"""
+
 def main(args):
 	print args
 	# Initialize a head node
@@ -20,8 +25,12 @@ def main(args):
 
 	linked_list.printList()
 
-	linked_list.remove("Minas Tirith")
-
+	if linked_list.search("Minas Tirith") != None:
+		print "Found!"
+	linked_list.search("foobar")
+	new_linked_list = linkedlist()
+	new_linked_list.search("Minas Tirith")
+	new_linked_list.search("foobar")
 
 	# print (linked_list.search("Gondor")).data
 
