@@ -1,5 +1,6 @@
 import os, os.path, sys, math, time
 from linkedlist import linkedlist
+from stack import stack
 from node import node
 
 """ Lord of the Rings inspiration from my Stanford 106B
@@ -8,8 +9,11 @@ from node import node
 """
 
 def main(args):
-	linkedListTesting(args)
+	# linkedListTesting(args)
+	# stackTesting(args)
+
 	graphTesting(args)
+
 
 
 def linkedListTesting(args):
@@ -61,6 +65,44 @@ def linkedListTesting(args):
 	print ""
 	linked_list.remove("Rohan")
 	linked_list.printList()
+
+def stackTesting(args):
+	word_stack = stack()
+	print word_stack.isEmpty()
+	print word_stack.stackSize()
+	for x in xrange(0, len(args)):
+		word_stack.push(args[x])
+
+	word_stack.toString()
+
+	print word_stack.isEmpty()
+
+	print word_stack.stackSize()
+
+	print word_stack.pop()
+
+	print word_stack.stackSize()
+
+	word_stack.toString()
+
+	print word_stack.peek()
+
+	word_stack.toString()
+
+	print "about to clear..."
+	word_stack.clear()
+
+	word_stack.toString()
+
+	print "is it empty?"
+	word_stack.isEmpty()
+
+	print "how large is it?"
+	word_stack.size
+
+	word_stack.push("hi")
+
+	word_stack.toString()
 
 def graphTesting(args):
 	pass

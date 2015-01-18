@@ -2,7 +2,8 @@ import os, os.path, sys, math, time
 from node import node
 
 class linkedlist():
-	""" Implementing a class for a linked list. Elements will be inserted at the beginning of the linked list every time.
+	""" Implementing a class for a basic linked list. Elements will 
+		be inserted at the beginning of the linked list every time.
 	   	Important Methods that have been implemented:
 	   		-insert
 	   		-remove
