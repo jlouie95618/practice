@@ -8,6 +8,11 @@ from node import node
 """
 
 def main(args):
+	linkedListTesting(args)
+	graphTesting(args)
+
+
+def linkedListTesting(args):
 	print args
 	# Initialize a head node
 	head = node("Minas Tirith")
@@ -57,5 +62,9 @@ def main(args):
 	linked_list.remove("Rohan")
 	linked_list.printList()
 
+def graphTesting(args):
+	pass
+
+ 
 
 main(sys.argv)
