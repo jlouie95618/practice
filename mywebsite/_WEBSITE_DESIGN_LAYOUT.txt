@@ -1,0 +1,148 @@
+Outline:
+ - Pages
+     - Homepage/Index
+         - About Me
+         - Blog 
+             - Posts: What do you think?... BLOG POSTS OBVI...
+         - Code
+             - Posts: explanation of the code that I've written, include code snippets, etc
+         - Contact
+         - Music
+             - Posts: Artists, Albums, Songs, Genres and different things I have to say about them
+         - Photo
+             - Posts: Posts contain images, any explanation if necessary, etc.
+         - Projects
+             - Posts: explanation of the different projects
+                 - 90 Days - cheat sheets condensing different topics that I've learned over 90 days
+                 - various photo projects
+                 - Writing Projects/creative writing
+                 - Any art, that I may feel the need to share...
+         - Tutoring
+
+----------------------------------------------------------------
+
+Setup:
+
+Default
+    html
+        head
+        body
+            div - page
+                div - header
+                div - content
+                div - footer
+
+Blog - Page
+    html
+        head - include Quattrocento font
+        body
+            div - page-blog
+                div - content
+                    div - blog-title
+                    div - blog-dropdown
+                        div - archive
+                        div - topics
+                        div - about
+                    div - blog-page-title
+                    div - blog-content
+                    div - blog-bottom-options
+                        div - blog-date
+                        div - blog-comments
+                        div - blog-social-media
+
+Blog - Post
+    html
+        head - include Quattrocento font
+        body
+            div - post-blog
+                div - content
+                    div - blog-page-title
+                    div - blog-content
+                    div - blog-bottom-options
+                        div - blog-date
+                        div - blog-comments
+                        div - blog-social-media
+
+
+Code
+    Default
+        ...
+        div - content
+            div - code-
+
+
+Music
+    Default
+        ...
+        div - content
+
+Photo
+    Default
+        ...
+        div - content
+
+
+Projects
+    Default
+        ...
+        div - content
+
+----------------------------------------------------------------
+
+Jekyll Structure:
+
+_config.yml
+
+_drafts
+    N/A
+
+_includes
+    head
+    head-blog
+    header
+    footer
+
+_layouts
+    default-page - DONE
+        table-of-contents
+        code-post
+        music-post
+        photo-post
+        project-post    
+    blog-page
+        blog-post
+            blog-entry
+        table-of-contents
+        list-of-topics
+
+_posts
+    N/A
+
+_data
+
+_site
+
+_sass
+
+css
+    vendor
+
+js
+    vendor
+
+attachments
+    images
+    music
+    documents
+
+----------------------------------------------------------------
+
+FONTS:
+    Quattrocento
+    Raleway
+
+
+
+
+
+

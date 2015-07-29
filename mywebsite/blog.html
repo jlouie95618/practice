@@ -1,0 +1,42 @@
+---
+layout: blog-home
+title: Blog
+permalink: /blog/
+---
+<!-- John Louie's Personal Website -->
+<div class="container wrapper-blog">
+	<div class="page-header-blog">
+		<h1 class="blog-title">Random Musings</h1>
+		<div class="blog-dropdown">	
+			<h3 class="blog-archive"><a href="#">Archive</a></h3>
+			<h3 class="blog-topics"><a href="#">Topics</a></h3>
+			<h3 class="blog-about"><a href="#">About</a></h3>
+		</div>
+	</div>
+
+	<ul class="post-list">
+		{% for post in site.posts %}
+			<li>
+				<span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+				<h2>
+					<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+				</h2>
+
+				{% if post.image %}<img src="{{ post.image }}" alt="{{ post.image-alt }}">{% endif %}
+
+				{% if post.excerpt %}<p class="post-excerpt">{{ post.excerpt }}</p>{% endif %}
+
+			</li>
+
+			<div class="post-end-items">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+
+			<div class="post-separator"></div>
+
+		{% endfor %}
+	</ul>
+
+</div>
