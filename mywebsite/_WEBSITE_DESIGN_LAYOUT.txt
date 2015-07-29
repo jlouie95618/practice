@@ -97,14 +97,14 @@ _drafts
     N/A
 
 _includes
-    head
-    head-blog
-    header
-    footer
+    head - DONE
+    head-blog - DONE
+    header - DONE
+    footer - DONE
 
 _layouts
     default-page - DONE
-        table-of-contents
+        table-of-contents - how does one make these?
         code-post
         music-post
         photo-post
@@ -112,8 +112,8 @@ _layouts
     blog-page
         blog-post
             blog-entry
-        table-of-contents
-        list-of-topics
+        table-of-contents - how does one make these?
+        list-of-topics - how does one make these?
 
 _posts
     N/A
