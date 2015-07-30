@@ -29,12 +29,11 @@
 
 .nav-tab {
     display: inline-block;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 10px
 }
 
 .nav-tab.is-active {
-    background-color: #1E1E20;
+    background-color: #080808;
 }
 
 /**
@@ -46,20 +45,19 @@
     // Positioning context for the mobile navigation icon
     position: relative;
     display: table-row;
-    height: 60px;
+    height: 58px;
     overflow: hidden;
 }
 
 .site-title {
+    color: $grey-color;
     font-size: 29px;
     line-height: 56px;
     letter-spacing: -1px;
     margin-bottom: 0;
     float: left;
-
-    &,
-    &:visited {
-        color: $grey-color;
+    &:hover {
+        color: white;
     }
 }
 
@@ -77,6 +75,11 @@
         // margin-left: 20px;
         display: block;
         padding: 5px 10px;
+        
+        &:hover {
+            color: white;
+        }
+
     }
 
     .page-link.is-active {
@@ -116,11 +119,6 @@
             display: none;
         }
 
-        &:hover .trigger {
-            display: block;
-            padding-bottom: 5px;
-        }
-
     }
 }
 
@@ -132,13 +130,7 @@
 .site-footer {
     // border-top: 1px solid $grey-color-light;
     // position: absolute;
-    padding: $spacing-unit 0;
     background-color: $site-footer-color;
-    // height: $footer-size - (2 * $spacing-unit);
-    right: 0;
-    bottom: 0;
-    left: 0;
-    // overflow: auto;
     display: table-row;
     height: 1px;
     overflow: hidden;
@@ -167,6 +159,7 @@
     float: left;
     margin-bottom: $spacing-unit / 2;
     padding-left: $spacing-unit / 2;
+    
 }
 
 .footer-col-1 {

@@ -1,13 +1,25 @@
 
 
 
-.wrapper-blog {
-    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-    max-width:         calc(#{$content-width} - (#{$spacing-unit}));
+.wrapper.blog {
+    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
+    max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
     margin: 0 auto;
     text-align: center;
     font-family: "Quattrocento", Georgia, Times New Roman, Times;
+    padding: $spacing-unit;
+    p {
+        text-indent: 50px;
+    }
 }
+
+a.post-link.blog {
+    color: black;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
 
 .post-content {
 
@@ -24,14 +36,16 @@
     display: inline-block;
     margin: 0 auto;
     width: 100%;
-}
-
-
-.page-header.blog {
     h3 {
         display: inline-block;
         margin-right: 3%;
         margin-left: 3%;
+        a {
+            color: black;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
 }
 
