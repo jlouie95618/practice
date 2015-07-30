@@ -1,0 +1,61 @@
+
+
+
+.wrapper-blog {
+    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
+    max-width:         calc(#{$content-width} - (#{$spacing-unit}));
+    margin: 0 auto;
+    text-align: center;
+    font-family: "Quattrocento", Georgia, Times New Roman, Times;
+}
+
+.post-content {
+
+    h1.page-title.blog {
+        // display: inline-block;
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+
+}
+
+.page-header.blog {
+    text-align: center;
+    display: inline-block;
+    margin: 0 auto;
+    width: 100%;
+}
+
+
+.page-header.blog {
+    h3 {
+        display: inline-block;
+        margin-right: 3%;
+        margin-left: 3%;
+    }
+}
+
+.blog-dropdown {
+
+}
+
+.blog-archive {
+
+}
+
+.blog-topics {
+
+}
+
+.blog-about {
+
+}
+
+.post-list.blog {
+    text-align: center;
+}
+
+.post-content.blog {
+    margin-bottom: $spacing-unit;
+    font-family: "Quattrocento", Georgia, Times New Roman, Times;
+}

@@ -105,10 +105,7 @@ _includes
 _layouts
     default-page - DONE
         table-of-contents - how does one make these?
-        code-post
-        music-post
-        photo-post
-        project-post    
+        default-post   
     blog-page
         blog-post
             blog-entry
@@ -141,8 +138,37 @@ FONTS:
     Quattrocento
     Raleway
 
+----------------------------------------------------------------
+
+STYLES:
+
+    main.scss
+        _base.scss
+        _layout.scss
+        _posts.scss
+            _blog.scss
+        _page.scss
+            _about_me.scss
+            _blog.scss
+            _code.scss
+            _contact.scss
+            _music.scss
+            _photos.scss
+            _projects.scss
+            _tutoring.scss
 
 
+----------------------------------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------
 
-
+Sites/Sources: 
+ - http://thesassway.com/beginner/how-to-structure-a-sass-project
+ - http://sass-lang.com/guide
+ - http://learnlayout.com/clearfix.html
+ - http://stackoverflow.com/questions/13608855/what-does-an-before-a-pseudo-element-in-css-mean
+ - http://matthewjamestaylor.com/blog/keeping-footers-at-the-bottom-of-the-page
+ - http://cssreset.com/how-to-keep-footer-at-bottom-of-page-with-css/
+ - https://css-tricks.com/snippets/css/sticky-footer/
+ 
 

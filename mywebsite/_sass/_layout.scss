@@ -1,3 +1,39 @@
+
+// Content div - this is the div that contains everything
+//  that is appended to page div in blog-page and default-page
+
+.content {
+    min-height: 100%;
+}
+
+.content.center {
+    background-color: #eee;
+    padding: 3%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 15px;
+}
+
+.content.left {
+
+}
+
+.content.right {
+
+}
+
+.nav-tab {
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.nav-tab.is-active {
+    background-color: #1E1E20;
+}
+
 /**
  * Site header
  */
@@ -39,7 +75,7 @@
         color: white;
     } 
 
-    @include media-query($on-palm) {
+    @include media-query($on-mobile) {
         position: absolute;
         top: 9px;
         right: 30px;
@@ -154,7 +190,7 @@
     }
 }
 
-@include media-query($on-palm) {
+@include media-query($on-mobile) {
     .footer-col {
         float: none;
         width: -webkit-calc(100% - (#{$spacing-unit} / 2));
@@ -172,15 +208,35 @@
     background-color: $background-color;
 }
 
-.page-heading {
+.page-header {
     font-size: 20px;
+}
+
+.page-title {
+
+}
+
+/**
+ * Posts
+ */
+
+.post-header {
+    margin-bottom: $spacing-unit;
+}
+
+.post-title {
+    font-size: 42px;
+    letter-spacing: -1px;
+    line-height: 1;
+
+    @include media-query($on-laptop) {
+        font-size: 36px;
+    }
 }
 
 .post-list {
     margin-left: 0;
     list-style: none;
-    text-align: center;
-
     > li {
         margin-bottom: $spacing-unit;
     }
@@ -196,23 +252,14 @@
     font-size: 24px;
 }
 
-
-
-/**
- * Posts
- */
-.post-header {
-    margin-bottom: $spacing-unit;
+.post-excerpt {
+    text-align: left;
 }
 
-.post-title {
-    font-size: 42px;
-    letter-spacing: -1px;
-    line-height: 1;
-
-    @include media-query($on-laptop) {
-        font-size: 36px;
-    }
+.post-separator {
+    border-top: 1px dotted black;
+    margin-top: 10px;
+    padding-bottom: 10px;
 }
 
 .post-content {
@@ -220,12 +267,6 @@
 
     h1 {
         font-size: 32px;
-    }
-
-    h1.blog-title {
-        // display: inline-block;
-        margin-right: 5%;
-        margin-left: 5%;
     }
 
     h2 {

@@ -8,8 +8,6 @@ dl, dd, ol, ul, figure {
     padding: 0;
 }
 
-
-
 /**
  * Basic styling
  */
@@ -17,7 +15,7 @@ body {
     font-family: $base-font-family;
     font-size: $base-font-size;
     line-height: $base-line-height;
-    font-weight: 300;
+    font-weight: $base-font-weight;
     color: $text-color;
     background-color: $background-color;
     -webkit-text-size-adjust: 100%;
@@ -38,8 +36,6 @@ ul, ol, dl, figure,
     margin-bottom: $spacing-unit / 2;
 }
 
-
-
 /**
  * Images
  */
@@ -47,8 +43,6 @@ img {
     max-width: 100%;
     vertical-align: middle;
 }
-
-
 
 /**
  * Figures
@@ -60,8 +54,6 @@ figure > img {
 figcaption {
     font-size: $small-font-size;
 }
-
-
 
 /**
  * Lists
@@ -77,8 +69,6 @@ li {
     }
 }
 
-
-
 /**
  * Headings
  */
@@ -86,25 +76,13 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 500;
 }
 
-
-
 /**
  * Links
  */
 a {
-    color: $brand-color;
+    color: $anchor-color;
     text-decoration: none;
-
-    // &:visited {
-    //     color: darken($brand-color, 15%);
-    // }
-
-    // &:hover {
-    //     color: $text-color;
-    // }
 }
-
-
 
 /**
  * Blockquotes
@@ -121,8 +99,6 @@ blockquote {
         margin-bottom: 0;
     }
 }
-
-
 
 /**
  * Code formatting
@@ -150,8 +126,6 @@ pre {
     }
 }
 
-
-
 /**
  * Wrapper
  */
@@ -160,6 +134,8 @@ pre {
     margin-left: auto;
     padding-right: $spacing-unit;
     padding-left: $spacing-unit;
+    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
+    max-width:         calc(#{$content-width} - (#{$spacing-unit}));
     @extend %clearfix;
 
     @include media-query($on-laptop) {
@@ -169,15 +145,6 @@ pre {
         padding-left: $spacing-unit / 2;
     }
 }
-
-.wrapper-blog {
-    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-    max-width:         calc(#{$content-width} - (#{$spacing-unit}));
-    margin: 0 auto;
-    text-align: center;
-    font-family: "Quattrocento", Georgia, Times New Roman, Times;
-}
-
 
 /**
  * Clearfix
@@ -191,8 +158,6 @@ pre {
     }
 }
 
-
-
 /**
  * Icons
  */
@@ -205,7 +170,7 @@ pre {
         vertical-align: middle;
 
         path {
-            fill: $grey-color;
+            fill: $icon-color;
         }
     }
 }

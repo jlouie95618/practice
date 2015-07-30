@@ -1,12 +1,12 @@
 ---
-layout: blog-home
+layout: blog-page
 title: Blog
 permalink: /blog/
 ---
 <!-- John Louie's Personal Website -->
-<div class="container wrapper-blog">
-	<div class="page-header-blog">
-		<h1 class="blog-title">Random Musings</h1>
+<div class="content wrapper-blog">
+	<div class="page-header blog">
+		<h1 class="page-title blog">Random Musings</h1>
 		<div class="blog-dropdown">	
 			<h3 class="blog-archive"><a href="#">Archive</a></h3>
 			<h3 class="blog-topics"><a href="#">Topics</a></h3>
@@ -14,7 +14,7 @@ permalink: /blog/
 		</div>
 	</div>
 
-	<ul class="post-list">
+	<ul class="post-list blog">
 		{% for post in site.posts %}
 			<li>
 				<span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
