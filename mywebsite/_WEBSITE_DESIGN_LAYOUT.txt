@@ -268,6 +268,28 @@ Seventh L Attempth: Pretty even on both sides now
  </g>
 </svg>
 
+Idea for Stylized Chinese Surname?...
+
+<svg width="639.9999999999999" height="480" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
+ <g>
+  <title>Layer 1</title>
+  <path transform="rotate(43.69990921020508 309.26031494140625,220.65060424804688) " id="svg_2" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" stroke="#000000" fill="#ffffff"/>
+  <path transform="rotate(85 345.9823913574218,287.8921813964845) " id="svg_1" d="m348.8165,273.24472c0,0 -4.64462,49.32889 0.7146,19.96436c5.19293,-28.61996 -12.34155,20.59662 -7.07047,-8.35229c5.29056,-29.11226 0.82367,19.32605 0.82367,19.32605" stroke-linecap="null" stroke-linejoin="null" fill="none" stroke="#000000"/>
+ </g>
+</svg>
+
+Slightly altered?:
+
+<svg width="640" height="480" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
+ <g>
+  <title>Layer 1</title>
+  <path transform="rotate(43.69990921020508 309.26031494140625,220.65060424804688) " id="svg_2" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" stroke="#000000" fill="#ffffff"/>
+  <path id="svg_1" d="m608.180786,245.307114c0,0 -782.482803,189.566971 -258.853973,181.052963c509.673798,-9.520935 -558.59494,-339.170914 -42.651031,-348.057961c518.625732,-9.35041 -247.637543,180.568794 -247.637543,180.568794" stroke-linecap="null" stroke-linejoin="null" fill="none" stroke="#000000"/>
+ </g>
+</svg>
+
 ----------------------------------------------------------------
 ----------------------------------------------------------------
 ----------------------------------------------------------------
@@ -283,5 +305,27 @@ Sites/Sources:
  - https://pixelsvsbytes.com/2011/09/sticky-css-footers-the-flexible-way/
  - https://pixelsvsbytes.com/examples/sticky-footers-the-flexible-way/simple.html?phpMyAdmin=0ZRJj6JUwx3do5nBBGsib-MdEm7
  - http://thesassway.com/intermediate/responsive-web-design-in-sass-using-media-queries-in-sass-32
+ - http://stackoverflow.com/questions/14012105/how-to-animate-css-translate
  - http://jsfiddle.net/ignaciocorreia/R3EaJ/
+ - https://css-tricks.com/absolute-positioning-inside-relative-positioning/
+ - https://css-tricks.com/controlling-css-animations-transitions-javascript/
+ - https://forum.jquery.com/topic/jquery-how-to-avoid-throbbing-hover-actions
+ - https://api.jquery.com/child-selector/
+ - https://css-tricks.com/almanac/properties/t/transform/
+ - http://stackoverflow.com/questions/11750862/is-there-a-way-to-create-a-link-to-the-top-of-the-page-without-using-anchors
+ - https://css-tricks.com/absolute-relative-fixed-positioining-how-do-they-differ/
+ - 
 
+
+For Inspiration: 
+ - http://www.awwwards.com/websites/trend/
+ - http://99designs.com/designer-blog/2015/01/16/top-web-design-trends-2015/
+ - http://maaemo.no/
+ - https://codemyviews.com/blog/15-tips-for-creating-a-great-website-footer
+ - https://color.adobe.com/create/color-wheel/?copy=true&base=2&rule=Custom&selected=4&name=Copy%20of%20Sea%20Wolf&mode=rgb&rgbvalues=0.792156862745098,0,0,1,1,1,0.45098039215686275,0.4588235294117647,0.47058823529411764,0.16862745098039217,0.16862745098039217,0.16862745098039217,0.11764705882352941,0.11764705882352941,0.12549019607843137&swatchOrder=0,1,2,3,4
+ - http://maxsteffen.com/moods/
+ - http://bvd.se/
+ - http://www.awwwards.com/100-greatest-free-fonts-collection.html
+ - http://tobiasahlin.com/blog/
+ - http://getpoole.com/
+ - 

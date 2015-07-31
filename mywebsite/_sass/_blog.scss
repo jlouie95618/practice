@@ -3,6 +3,8 @@ img.stylized-l-under-title {
     width: 40%;
     margin-bottom: 30px;
     margin-top: 0px;
+    -webkit-transform: translate(0px, 10px);
+    -webkit-transition: -webkit-transform 1s ease-in-out;
 }
 
 .wrapper.blog {
@@ -13,7 +15,7 @@ img.stylized-l-under-title {
     font-family: $blog-font-family;
     padding: $spacing-unit;
     p {
-        text-indent: 50px;
+        text-indent: 5%;
     }
 }
 
@@ -54,19 +56,21 @@ a.post-link.blog {
 }
 
 .blog-dropdown {
-    display: none;
+    margin-top: -30px;
+    height: 40px;
+    margin-bottom: 0px
 }
 
 .blog-archive {
-
+    display: none;
 }
 
 .blog-topics {
-
+    display: none;
 }
 
 .blog-about {
-
+    display: none;
 }
 
 .post-list.blog {
