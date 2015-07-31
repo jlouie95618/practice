@@ -283,4 +283,5 @@ Sites/Sources:
  - https://pixelsvsbytes.com/2011/09/sticky-css-footers-the-flexible-way/
  - https://pixelsvsbytes.com/examples/sticky-footers-the-flexible-way/simple.html?phpMyAdmin=0ZRJj6JUwx3do5nBBGsib-MdEm7
  - http://thesassway.com/intermediate/responsive-web-design-in-sass-using-media-queries-in-sass-32
+ - http://jsfiddle.net/ignaciocorreia/R3EaJ/
 

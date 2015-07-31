@@ -1,12 +1,16 @@
 
-
+img.stylized-l-under-title {
+    width: 40%;
+    margin-bottom: 30px;
+    margin-top: 0px;
+}
 
 .wrapper.blog {
     max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
     max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
     margin: 0 auto;
     text-align: center;
-    font-family: "Quattrocento", Georgia, Times New Roman, Times;
+    font-family: $blog-font-family;
     padding: $spacing-unit;
     p {
         text-indent: 50px;
@@ -50,7 +54,7 @@ a.post-link.blog {
 }
 
 .blog-dropdown {
-
+    display: none;
 }
 
 .blog-archive {
@@ -71,5 +75,5 @@ a.post-link.blog {
 
 .post-content.blog {
     margin-bottom: $spacing-unit;
-    font-family: "Quattrocento", Georgia, Times New Roman, Times;
+    font-family: $blog-font-family;
 }
