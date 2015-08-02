@@ -328,4 +328,5 @@ For Inspiration:
  - http://www.awwwards.com/100-greatest-free-fonts-collection.html
  - http://tobiasahlin.com/blog/
  - http://getpoole.com/
+ - http://stackoverflow.com/questions/406192/get-current-url-in-javascript
  - 
