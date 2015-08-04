@@ -7,10 +7,14 @@ $(document).ready(function() {
 
     $('.button').click(function() {
         if (sidebarToggle) {
+            $('.sidebar.blog').stop();
+            $('.wrapper.blog').stop();
             $('.sidebar.blog').animate({ left: 0 }, 1000);
             $('.wrapper.blog').css({ 'webkit-transform': 'translate(100px, 0px)' });
             sidebarToggle = false;
         } else { 
+            $('.sidebar.blog').stop();
+            $('.wrapper.blog').stop();
             $('.sidebar.blog').animate({ left: -200 }, 1000);
             $('.wrapper.blog').css({ 'webkit-transform': 'translate(0px, 0px)' });
             sidebarToggle = true;

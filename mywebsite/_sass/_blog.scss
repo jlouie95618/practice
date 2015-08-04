@@ -11,11 +11,12 @@ img.stylized-l-under-title {
     position: fixed;
     background-color: $site-header-color;
     color: white;
-    width: 200px;
-    left: -200px;
+    width: $blog-sidebar-width;
+    left: -$blog-sidebar-width;
     min-height: 100%;
     top: 0px;
     bottom: 0px;
+    z-index: 0;
 }
 
 .blog.sidebar.menu {
@@ -26,6 +27,16 @@ img.stylized-l-under-title {
     position: fixed;
     display: block;
 }
+    .menu-icon {
+        height: 25px;
+        width: 35px;
+        margin-top: 50%;
+        margin-left: 50%;
+    }
+        .option {
+            text-align: center;
+            padding: 10%;
+        }
 
 .wrapper.blog.is-translated {
     // -webkit-transform: translate(100px, 0px);
@@ -56,7 +67,6 @@ a.post-link.blog {
 .post-content {
 
     h1.page-title.blog {
-        // display: inline-block;
         margin-right: 5%;
         margin-left: 5%;
     }
