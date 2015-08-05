@@ -230,7 +230,7 @@
  */
 
 .post-header {
-    margin-bottom: $spacing-unit;
+    margin-bottom: $spacing-unit / 2;
 }
 
 .post-title {
@@ -268,7 +268,7 @@
 .post-separator {
     border-top: 1px dotted black;
     margin-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
 }
 
 .post-content {

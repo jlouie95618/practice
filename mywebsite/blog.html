@@ -1,35 +1,102 @@
 ---
 layout: blog-page
 title: Blog
+uppercase-title: BLOG
 permalink: /blog/
 ---
 <!-- John Louie's Personal Website -->
 <div class="sidebar blog">
-	<div class="menu">
-		<div class="option">HOME</div>
-		<div class="option">ABOUT ME</div>
-		<div class="option">CODE</div>
-		<div class="option">MUSIC</div>
-		<div class="option">PHOTO</div>
-		<div class="option">PROJECTS</div>
-		<div class="option">TUTORING</div>
-		<div class="option">OPTION 8</div>		
+	<div class="button sidebar-close hvr-grow">
+		<span class="menu-horizontal-bar top"></span>
+		<span class="menu-horizontal-bar bottom"></span>
 	</div>
+
+	<div class="option">
+		<span class="hvr-underline-from-left menu hvr-grow">
+			<a href="{{ site.baseurl }}">HOME</a>
+		</span>
+	</div>
+
+    {% for tab in site.pages %}
+        {% if tab.uppercase-title %}
+            <div class="option">
+				<span class="hvr-underline-from-left menu hvr-grow">
+	            	<a href="{{ tab.url | prepend: site.baseurl }}">
+	            		{{ tab.uppercase-title }}
+	            	</a>
+				</span>
+            </div>
+        {% endif %}
+    {% endfor %}
+
+
+	<!-- 
+	<div class="option">
+		<span class="hvr-underline-from-left menu hvr-grow">
+			<a href="{{ prepend: site.baseurl }}">HOME</a>
+		</span>
+	</div>
+	<div class="option">
+		<span class="hvr-underline-from-left menu hvr-grow">
+			<a href="{{ prepend: site.baseurl }}/about-me/">ABOUT ME</a>
+		</span>
+	</div>
+	<div class="option">
+		<span class="hvr-underline-from-left menu hvr-grow">
+			<a href="{{ prepend: site.baseurl }}/code/">CODE</a>
+		</span>
+	</div>
+	<div class="option">
+		<span class="hvr-underline-from-left menu hvr-grow">
+			<a href="{{ prepend: site.baseurl }}/music/">MUSIC</a>
+		</span>
+	</div>
+	<div class="option">
+		<span class="hvr-underline-from-left menu hvr-grow">
+			<a href="{{ prepend: site.baseurl }}/photo/">PHOTO</a>
+		</span>
+	</div>
+	<div class="option">
+		<span class="hvr-underline-from-left menu hvr-grow">
+			<a href="{{ prepend: site.baseurl }}/projects/">PROJECTS</a>
+		</span>
+	</div>
+	<div class="option">
+		<span class="hvr-underline-from-left menu hvr-grow">
+			<a href="{{ prepend: site.baseurl }}/tutoring/">TUTORING</a>
+		</span>
+	</div>
+	<div class="option">
+		<span class="hvr-underline-from-left menu hvr-grow">
+			<a href="{{ prepend: site.baseurl }}">OPTION 8</a>
+		</span>
+	</div> -->		
 </div>
-<div class="button">
-	button...
-	<span></span>
-	<span></span>
-	<span></span>
+<div class="button sidebar-open">
+	<span class="menu-horizontal-bar"></span>
+	<span class="menu-horizontal-bar"></span>
+	<span class="menu-horizontal-bar"></span>
 </div>
 <div class="content wrapper blog">
 	<div class="page-header blog">
 		<h1 class="page-title blog">ASdfgasdf asdfw</h1>
 		<img class="stylized-l-under-title" src="../j.png" alt="stylized L">
 		<div class="blog-dropdown">	
-			<h3 class="blog-archive"><a href="#">Archive</a></h3>
-			<h3 class="blog-topics"><a href="#">Topics</a></h3>
-			<h3 class="blog-about"><a href="#">About</a></h3>
+			<h3 class="blog-archive">
+				<a href="#">
+					<span class="hvr-underline-from-left anchor">Archive</span>
+				</a>
+			</h3>
+			<h3 class="blog-topics">
+				<a href="#">
+					<span class="hvr-underline-from-left anchor">Topics</span>
+				</a>
+			</h3>
+			<h3 class="blog-about">
+				<a href="#">
+					<span class="hvr-underline-from-left anchor">About</span>
+				</a>
+			</h3>
 		</div>
 	</div>
 
@@ -38,12 +105,14 @@ permalink: /blog/
 			<li>
 				<span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 				<h2>
-					<a class="post-link blog" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+					<a class="post-link blog hvr-underline-from-left anchor" href="{{ post.url | prepend: site.baseurl }}">
+						{{ post.title }}
+					</a>
 				</h2>
 
 				{% if post.image %}<img src="{{ post.image }}" alt="{{ post.image-alt }}">{% endif %}
 
-				{% if post.excerpt %}<p class="post-excerpt">{{ post.excerpt }}</p>{% endif %}
+				{% if post.excerpt %}<p class="post-excerpt blog">{{ post.excerpt }}</p>{% endif %}
 
 			</li>
 

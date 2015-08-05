@@ -26,6 +26,8 @@ img.stylized-l-under-title {
 .button {
     position: fixed;
     display: block;
+    width: 2%;
+    padding: 1%;
 }
     .menu-icon {
         height: 25px;
@@ -36,7 +38,19 @@ img.stylized-l-under-title {
         .option {
             text-align: center;
             padding: 10%;
+            a {
+                color: white;
+            }
         }
+
+.button.sidebar-close {
+    position: fixed;
+    display: block;
+    width: 1em;
+    height: 2%;
+    padding: 1em;
+    margin-top: 3px;
+}
 
 .wrapper.blog.is-translated {
     // -webkit-transform: translate(100px, 0px);
@@ -50,17 +64,11 @@ img.stylized-l-under-title {
     text-align: center;
     font-family: $blog-font-family;
     padding: $spacing-unit;
-    p {
-        text-indent: 5%;
-    }
-    -webkit-transition: -webkit-transform 1s ease-in-out;    
+    // -webkit-transition: -webkit-transform 1s ease-in-out;    
 }
 
 a.post-link.blog {
     color: black;
-    &:hover {
-        text-decoration: underline;
-    }
 }
 
 
@@ -116,4 +124,49 @@ a.post-link.blog {
 .post-content.blog {
     margin-bottom: $spacing-unit;
     font-family: $blog-font-family;
+    text-align: justify;
+    p {
+        text-indent: 5%;
+    }
 }
+
+.menu-horizontal-bar {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: $grey-color;
+    margin-bottom: 5px;
+}
+
+.menu-horizontal-bar.top {
+    transform: rotate(45deg);
+    margin-bottom: -3px;
+    width: 100%;
+    background-color: $grey-color;
+}
+
+.menu-horizontal-bar.top.is-active {
+    background-color: white;    
+}
+
+.menu-horizontal-bar.bottom {
+    transform: rotate(-45deg);
+    margin-bottom: 0px;
+    width: 100%;
+    background-color: $grey-color;
+}
+
+.menu-horizontal-bar.bottom.is-active {
+    background-color: white;    
+}
+
+.hvr-underline-from-left.menu:before {
+    background: white;
+    height: 2px;
+}
+
+.hvr-underline-from-left.anchor:before {
+    background: black;
+    height: 2px;
+}
+

@@ -3,22 +3,36 @@ var _NUM_SEC = 1;
 
 $(document).ready(function() {
 
-    var sidebarToggle = true;
 
-    $('.button').click(function() {
-        if (sidebarToggle) {
-            $('.sidebar.blog').stop();
-            $('.wrapper.blog').stop();
-            $('.sidebar.blog').animate({ left: 0 }, 1000);
-            $('.wrapper.blog').css({ 'webkit-transform': 'translate(100px, 0px)' });
-            sidebarToggle = false;
-        } else { 
-            $('.sidebar.blog').stop();
-            $('.wrapper.blog').stop();
-            $('.sidebar.blog').animate({ left: -200 }, 1000);
-            $('.wrapper.blog').css({ 'webkit-transform': 'translate(0px, 0px)' });
-            sidebarToggle = true;
-        }
+    $('.button.sidebar-close.hvr-grow').hover(function(eventData) {
+        $('.menu-horizontal-bar.top').stop();
+        $('.menu-horizontal-bar.bottom').stop();
+        $('.menu-horizontal-bar.top').addClass('is-active');
+        $('.menu-horizontal-bar.bottom').addClass('is-active');
+    }, function(eventData) {
+        $('.menu-horizontal-bar.top').stop();
+        $('.menu-horizontal-bar.bottom').stop();
+        $('.menu-horizontal-bar.top').removeClass('is-active');
+        $('.menu-horizontal-bar.bottom').removeClass('is-active');
+    });
+
+    $('.button.sidebar-open').click(function() {
+        $('.sidebar.blog').stop(true);
+        $('.wrapper.blog').stop(true);
+        $('.button.sidebar-open').stop(true);
+        $('.sidebar.blog').animate({ left: 0 }, 1000);
+        $('.wrapper.blog').animate({ 'marginLeft': '435' }, 1000); // 435 === +=100
+        $('.button.sidebar-open').fadeOut(500);
+    });
+
+    $('.button.sidebar-close').click(function() {
+        $('.sidebar.blog').stop(true);
+        $('.wrapper.blog').stop(true);
+        $('.button.sidebar-open').stop(true);
+        $('.sidebar.blog').animate({ left: -200 }, 1000);
+        $('.wrapper.blog').animate({ 'marginLeft': '335' }, 1000); // 335 === -=100
+        $('.button.sidebar-open').delay(1000).fadeIn('fast');
+        sidebarToggle = true;
     });
 
     // Code pertaining to the in blog page dropdown...

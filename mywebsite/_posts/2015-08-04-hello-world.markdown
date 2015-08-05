@@ -22,6 +22,7 @@ Purpose and Goals
         4. Art/Art History
         5. History
         6. Music - both performing/playing and critical listening
+        7. Astronomy
     * Once I've learned a little, I would also like to take time to teach what I've learned
 6. Eventually open my thoughts/posts to discussion/comments from readers
 7. Account for more adventureous escapades like traveling, etc.
