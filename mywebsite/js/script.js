@@ -3,7 +3,35 @@ var _NUM_SEC = 1;
 
 $(document).ready(function() {
 
+    console.log(window.location.pathname);
+    console.log(window.location.href);
 
+    if ((window.location.pathname).indexOf('/about-me/') > -1) {
+
+    } else if ((window.location.pathname).indexOf('/blog/') > -1) {
+        blog();
+    } else if ((window.location.pathname).indexOf('/code/') > -1) {
+
+    } else if ((window.location.pathname).indexOf('/music/') > -1) {
+
+    } else if ((window.location.pathname).indexOf('/photos/') > -1) {
+        photos();
+    } else if ((window.location.pathname).indexOf('/projects/') > -1) {
+
+    } else if ((window.location.pathname).indexOf('/tutoring/') > -1) {
+
+    } else {
+
+    }
+
+
+});
+
+function aboutMe() {
+    // body...
+}
+
+function blog() {
     $('.button.sidebar-close.hvr-grow').hover(function(eventData) {
         $('.menu-horizontal-bar.top').stop();
         $('.menu-horizontal-bar.bottom').stop();
@@ -56,15 +84,38 @@ $(document).ready(function() {
         $('.blog-about').fadeOut(_MILLISEC_IN_SEC * _NUM_SEC);
         $('.stylized-l-under-title').css({'-webkit-transform' : 'translate(0px, 10px)'});
     });
-
-});
-
-function headerOptionFadeIn (elem) {
-    elem.stop();
-    elem.fadeIn(_MILLISEC_IN_SEC * _NUM_SEC);
 }
 
-function headerOptionFadeOut (elem) {
-    elem.stop();
-    elem.fadeOut(_MILLISEC_IN_SEC * _NUM_SEC);
+function code() {
+    // body...
+}
+
+function home() {
+    // body...
+}
+
+function music() {
+    // body...
+}
+
+function photos() {
+    console.log('sanity check');
+    $('.album-cover').hover(function(eventData) {
+        console.log('sanity check 3');
+        // $('img.album').stop();
+        $(this).children('img.album').css('opacity', '0.5');
+        $(this).children('.album-description').css('opacity', '1');
+    }, function(eventData) {
+        // $('img.album').stop();
+        $(this).children('img.album').css('opacity', '1');
+        $(this).children('.album-description').css('opacity', '0');
+    });
+}
+
+function projects() {
+    // body...
+}
+
+function tutoring() {
+    // body...
 }
