@@ -99,16 +99,16 @@ function music() {
 }
 
 function photos() {
-    console.log('sanity check');
     $('.album-cover').hover(function(eventData) {
-        console.log('sanity check 3');
-        // $('img.album').stop();
-        $(this).children('img.album').css('opacity', '0.5');
-        $(this).children('.album-description').css('opacity', '1');
+        $(this).children('.album.overlay').stop();
+        $(this).children('.album-description').stop();
+        $(this).children('.album.overlay').fadeIn('slow');
+        $(this).children('.album-description').fadeIn('slow');
     }, function(eventData) {
-        // $('img.album').stop();
-        $(this).children('img.album').css('opacity', '1');
-        $(this).children('.album-description').css('opacity', '0');
+        $(this).children('.album.overlay').stop();
+        $(this).children('.album-description').stop();
+        $(this).children('.album.overlay').fadeOut('slow');
+        $(this).children('.album-description').fadeOut('slow');
     });
 }
 

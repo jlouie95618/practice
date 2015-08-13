@@ -9,6 +9,10 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://jlouie95618.github.io" # the base hostname & protocol for your site
 twitter_username: jwlouie19
 github_username:  jlouie95618
+phone: 1.530.902.8214
+address: >
+  910 Santa Paula Way <br>
+  Davis, CA 95618
 
 # Build settings
 markdown: kramdown
