@@ -21,7 +21,7 @@ $(document).ready(function() {
     } else if ((window.location.pathname).indexOf('/tutoring/') > -1) {
 
     } else {
-
+        homepage()
     }
 
 
@@ -90,8 +90,14 @@ function code() {
     // body...
 }
 
-function home() {
-    // body...
+function homepage() {
+    var imgUrls = ['https://farm7.staticflickr.com/6093/7022460561_8b55cd68bf_h.jpg',
+        'https://farm7.staticflickr.com/6091/7022465317_108d866745_h.jpg'];
+    var imageIndex = 0;
+    var backgroundElem = $('body.homepage').css({background : 'url("' + imgUrls[imageIndex++] + '")  no-repeat center center fixed'});
+    setInterval(function() {
+        backgroundElem.css({background : 'url(' + imgUrls[(imageIndex++) % imgUrls.length] + ')  no-repeat center center fixed'});
+    }, 9000);
 }
 
 function music() {

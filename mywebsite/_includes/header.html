@@ -1,8 +1,8 @@
-<header class="site-header">
+<header class="site-header {% if page.homepage == site.title %}homepage{% endif %}">
 
-    <div class="wrapper header">
+    <div class="wrapper header {% if page.homepage == site.title %}homepage{% endif %}">
 
-        <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+        <a class="site-title {% if page.homepage == site.title %}homepage{% endif %}" href="{{ site.baseurl }}/">{{ site.title }}</a>
 
         <nav class="site-nav">
             <a href="#" class="menu-icon">
@@ -13,10 +13,10 @@
                 </svg>
             </a>
 
-            <div class="trigger">
+            <div class="trigger {% if page.homepage == site.title %}homepage{% endif %}">
                 {% for tab in site.pages %}
                     {% if tab.title %}
-                        <div class="nav-tab{% if page.title == tab.title %} is-active{% endif%}"><a class="page-link{% if page.title == tab.title %} is-active{% endif%}" href="{{ tab.url | prepend: site.baseurl }}">{{ tab.title }}</a></div>
+                        <div class="nav-tab{% if page.title == tab.title %} is-active{% endif%} {% if page.homepage == site.title %}homepage{% endif %}"><a class="page-link{% if page.title == tab.title %} is-active{% endif%}" href="{{ tab.url | prepend: site.baseurl }}">{{ tab.title }}</a></div>
                     {% endif %}
                 {% endfor %}
             </div>

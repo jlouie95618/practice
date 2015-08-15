@@ -12,13 +12,30 @@ permalink: /photos/
         <p class="photos preamble">Here are a few albums that highlight some of my very favorite photographs. All photos are owned and taken by me, unless otherwise noted.</p>
     </div>
     <div class="albums">
-        <div class="album-cover hvr-grow">
+
+        {% for post in site.categories.albums %}
+            <a href="{{ post.album-link }}">
+                <div class="album-cover hvr-grow">
+                    <div class="album overlay"></div>
+                    <div class="album-description">
+                        <h3>{{ post.title }}</h3>
+                        <p>{{ post.description }}</p>
+                    </div>
+                    <img class="album" src="{{ post.cover-src }}" alt="{{ post.cover-alt }}">
+                </div>
+            </a>
+        {% endfor %}
+
+
+        <!-- <div class="album-cover hvr-grow">
             <div class="album overlay"></div>
             <div class="album-description">
                 <p> asdfdsasdfds asdfds asdf asdf</p>
             </div>
             <img class="album" src="../attachments/images/7022460561_6b485b4d3e_z.jpg" alt="Dirt Path 2">
         </div>
+
+
         <div class="album-cover hvr-grow">
             <div class="album overlay"></div>
             <div class="album-description">
@@ -75,13 +92,14 @@ permalink: /photos/
             </div>        
             <img class="album" src="../attachments/images/7022460561_6b485b4d3e_z.jpg" alt="Dirt Path 2">
         </div>
-    <div class="album-cover hvr-grow">
+        <div class="album-cover hvr-grow">
             <div class="album overlay"></div>
             <div class="album-description">
                 <p> asdfdsasdfds asdfds asdf asdf</p>
             </div>        
             <img class="album" src="https://farm7.staticflickr.com/6219/7022454763_5675579f32_z.jpg" alt="Arboretum Walkway">
-        </div>        
+        </div> -->   
+
     </div>
 
 </div>
