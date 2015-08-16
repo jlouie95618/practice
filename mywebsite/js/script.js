@@ -32,18 +32,7 @@ function aboutMe() {
 }
 
 function blog() {
-    $('.button.sidebar-close.hvr-grow').hover(function(eventData) {
-        $('.menu-horizontal-bar.top').stop();
-        $('.menu-horizontal-bar.bottom').stop();
-        $('.menu-horizontal-bar.top').addClass('is-active');
-        $('.menu-horizontal-bar.bottom').addClass('is-active');
-    }, function(eventData) {
-        $('.menu-horizontal-bar.top').stop();
-        $('.menu-horizontal-bar.bottom').stop();
-        $('.menu-horizontal-bar.top').removeClass('is-active');
-        $('.menu-horizontal-bar.bottom').removeClass('is-active');
-    });
-
+    // Code pertaining to the sidebar opening/closing
     $('.button.sidebar-open').click(function() {
         $('.sidebar.blog').stop(true);
         $('.wrapper.blog').stop(true);
@@ -91,6 +80,11 @@ function code() {
 }
 
 function homepage() {
+
+    homepageIntro();
+
+    // $('.homepage.overlay').delay(3000).fadeOut(1000);
+
     var imgUrls = ['https://farm7.staticflickr.com/6093/7022460561_8b55cd68bf_h.jpg',
         'https://farm7.staticflickr.com/6091/7022465317_108d866745_h.jpg'];
     var imageIndex = 0;
@@ -98,6 +92,43 @@ function homepage() {
     setInterval(function() {
         backgroundElem.css({background : 'url(' + imgUrls[(imageIndex++) % imgUrls.length] + ')  no-repeat center center fixed'});
     }, 9000);
+}
+
+function homepageIntro() {
+    $('.homepage.opening-message').typed({
+        strings: ['Hello!', 
+            'My name is John ^1000 <br> and this is me',
+            '^2000 at least I was the guy <br> on top of the A.',
+            'Welcome! <br> ^1000 I do hope you enjoy <br> viewing my website :)'],
+        backDelay: 1500,
+        startDelay: 500,
+        showCursor: false,
+        callback: function() {
+            $('.homepage.overlay').fadeOut(3000, function() {
+                splashMessage();
+            });
+        },
+        onStringTyped: function() {
+            if ($('.homepage.opening-message').text().indexOf('My name is John') > -1) {
+                $('.homepage.me').delay(1000).animate({ left: '50%' }, 1000, 'easeOutExpo', function() {
+                    $(this).delay(1500).animate({ left: '-52%' }, 1000, 'easeInExpo', function() {
+                        console.log($('.homepage.opening-message'));
+                    });
+                });
+            }
+        }
+    });
+}
+
+function splashMessage() {
+    $('.homepage.splash-message').typed({
+        strings: ['Who am I?<br> ^1000 Student. ^900 Teacher. ^900 Developer.'],
+        startDelay: 500,
+        showCursor: false,
+        callback: function() {
+            
+        }
+    });
 }
 
 function music() {

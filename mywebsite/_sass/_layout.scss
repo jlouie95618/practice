@@ -145,10 +145,18 @@
     color: $grey-color;
 }
 
-.contact-list,
+.contact-list {
+    list-style: none;
+    margin-left: 0;
+    padding-top: 3%;
+}
+
 .social-media-list {
     list-style: none;
     margin-left: 0;
+    a {
+        vertical-align: text-bottom;
+    }
 }
 
 .footer-col-wrapper {
@@ -204,8 +212,9 @@
 
 .footer-col-2.center.social-media {
     margin: 0 auto;
-    width: -webkit-calc(35% - (#{$spacing-unit} / 2));
-    width:         calc(35% - (#{$spacing-unit} / 2));
+    width: -webkit-calc(55% - (#{$spacing-unit} / 2));
+    width:         calc(55% - (#{$spacing-unit} / 2));
+    padding-left: 39%;
 }
 
 /**
@@ -316,3 +325,29 @@
         }
     }
 }
+
+.ion-ios-email {
+    font-size: 22px;
+    vertical-align: bottom;
+    color: $grey-color;
+}
+
+.ion-close {
+    font-size: 22px;
+    color: $grey-color;
+    &:hover {
+        color: white;
+    }
+}
+
+.ion-navicon {
+    font-size: 40px;
+    vertical-align: top;
+    color: $grey-color;
+
+}
+
+.text {
+    padding-top: 1%;
+}
+
